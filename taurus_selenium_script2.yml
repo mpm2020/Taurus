@@ -1,0 +1,5 @@
+execution:
+- executor: selenium
+  iterations: 10
+  scenario:
+    script: selenium_python_chrome_script1.py
