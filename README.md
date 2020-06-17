@@ -8,7 +8,7 @@ https://gettaurus.org/
 
 pip install bzt
 
-Ejecutar las pruebas
+## Ejecutar las pruebas
  
  Para el caso de las pruebas de carga:
 
