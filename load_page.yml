@@ -1,0 +1,23 @@
+execution:
+- executor: selenium
+  scenario: open_page
+  concurrency: 5
+  ramp-up: 1m
+  hold-for: 2m
+
+scenarios:
+  open_page:
+   browser: Chrome
+   timeout: 10s
+   think-time: 3s
+   headless: true
+   default-address: http://blazedemo.com
+   requests:
+    - url: /purchase.php
+      actions:
+       - waitByCSS(h2): visible
+       - keysByID(inputName): MyName
+       - clickByCSS(.btn.btn-primary)
+      assert:
+       - contains:
+         - 'Thank you for your purchase today!'
